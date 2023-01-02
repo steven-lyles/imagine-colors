@@ -1,0 +1,115 @@
+<!--
+ * ======================================================================================
+ * Imagine: Colors
+ * Copyright © Steven M. Lyles
+ * https://github.com/steven-lyles/imagine-colors
+ * https://www.stevenlyles.net
+ * =====================================================================================
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imagine Colors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link rel="stylesheet" href="imagine-colors.css">
+  </head>
+  <body>
+  <div class="bg">
+    <div id="control-banner">
+    </div>
+    <div id="dropzone">
+      <div id="message" class="drop-message">
+        Drag & Drop Images Here<br><br>OR<br><br>Click to Upload
+      </div>
+      <canvas id="canvas-main">HTML5 Canvas not supported</canvas>
+    </div>
+    <br>
+    <table id="swatches">
+      <tr>
+        <td id="swatch_0" class="color-cell" style="background-color: #000000;"></td>
+        <td id="hValue_0" class="color-value">#000000 : rgb(0, 0, 0)</td>
+      <tr>
+        <td id="swatch_1" class="color-cell" style="background-color: #0c0c0c;"></td>
+        <td id="hValue_1" class="color-value">#0c0c0c : rgb(12, 12, 12)</td>
+      </tr>
+      <tr>
+        <td id="swatch_2" class="color-cell" style="background-color: #181818;"></td>
+        <td id="hValue_2" class="color-value">#181818 : rgb(24, 24, 24)</td>
+      </tr>
+      <tr>
+        <td id="swatch_3" class="color-cell" style="background-color: #242424;"></td>
+        <td id="hValue_3" class="color-value">#242424 : rgb(36, 36, 36)</td>
+      </tr>
+      <tr>
+        <td id="swatch_4" class="color-cell" style="background-color: #303030;"></td>
+        <td id="hValue_4" class="color-value">#303030 : rgb(48, 48, 48)</td>
+      </tr>
+      <tr>
+        <td id="swatch_5" class="color-cell" style="background-color: #3c3c3c;"></td>
+        <td id="hValue_5" class="color-value">#3c3c3c : rgb(60, 60, 60)</td>
+      </tr>
+      <tr>
+        <td id="swatch_6" class="color-cell" style="background-color: #484848;"></td>
+        <td id="hValue_6" class="color-value">#484848 : rgb(72, 72, 72)</td>
+      </tr>
+      <tr>
+        <td id="swatch_7" class="color-cell" style="background-color: #545454;"></td>
+        <td id="hValue_7" class="color-value">#545454 : rgb(84, 84, 84)</td>
+      </tr>
+      <tr>
+        <td id="swatch_8" class="color-cell" style="background-color: #606060;"></td>
+        <td id="hValue_8" class="color-value">#606060 : rgb(96, 96, 96)</td>
+      </tr>
+      <tr>
+        <td id="swatch_9" class="color-cell" style="background-color: #6c6c6c;"></td>
+        <td id="hValue_9" class="color-value">#6c6c6c : rgb(108, 108, 108)</td>
+      </tr>
+      <tr>
+        <td id="swatch_10" class="color-cell" style="background-color: #787878;"></td>
+        <td id="hValue_10" class="color-value">#787878 : rgb(120, 120, 120)</td>
+      </tr>
+      <tr>
+        <td id="swatch_11" class="color-cell" style="background-color: #848484;"></td>
+        <td id="hValue_11" class="color-value">#848484 : rgb(132, 132, 132)</td>
+      </tr>
+      <tr>
+        <td id="swatch_12" class="color-cell" style="background-color: #909090;"></td>
+        <td id="hValue_12" class="color-value">#909090 : rgb(144, 144, 144)</td>
+      </tr>
+      <tr>
+        <td id="swatch_13" class="color-cell" style="background-color: #9c9c9c;"></td>
+        <td id="hValue_13" class="color-value">#9c9c9c : rgb(156, 156, 156)</td>
+      </tr>
+      <tr>
+        <td id="swatch_14" class="color-cell" style="background-color: #a8a8a8;"></td>
+        <td id="hValue_14" class="color-value">#a8a8a8 : rgb(168, 168, 168)</td>
+      </tr>
+      <tr>
+        <td id="swatch_15" class="color-cell" style="background-color: #b4b4b4;"></td>
+        <td id="hValue_15" class="color-value">#b4b4b4 : rgb(180, 180, 180)</td>
+      </tr>
+      <tr>
+        <td id="swatch_16" class="color-cell" style="background-color: #c0c0c0;"></td>
+        <td id="hValue_16" class="color-value">#c0c0c0 : rgb(192, 192, 192)</td>
+      </tr>
+      <tr>
+        <td id="swatch_17" class="color-cell" style="background-color: #cccccc;"></td>
+        <td id="hValue_17" class="color-value">#cccccc : rgb(204, 204, 204)</td>
+      </tr>
+      <tr>
+        <td id="swatch_18" class="color-cell" style="background-color: #d8d8d8;"></td>
+        <td id="hValue_18" class="color-value">#d8d8d8 : rgb(216, 216, 216)</td>
+      </tr>
+      <tr>
+        <td id="swatch_19" class="color-cell" style="background-color: #e4e4e4;"></td>
+        <td id="hValue_19" class="color-value">#e4e4e4 : rgb(228, 228, 228)</td>
+      </tr>
+    </table>
+  </div>
+    <script type="text/javascript" src="imagine-colors.js"></script>
+  </body>
+</html>

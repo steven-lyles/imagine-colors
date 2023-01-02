@@ -1,0 +1,94 @@
+/* 
+    Created on : Apr 18, 2021, 11:51:15 AM
+    Author     : stevenlyles
+*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color:#fafafa;
+  font-family: 'Segoe UI', sans-serif;
+}
+.bg {
+  /* The image used */
+  background-image: url("./leather.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#control-banner {
+  width: 50px;
+  height: 725px;
+  background-color: #352F33;
+  display: inline;
+  float: left;
+  box-shadow:0 0 35px rgba(0,0,0,0.05);
+  border-radius:15px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#dropzone {
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius:15px;
+  box-shadow:0 0 35px rgba(0,0,0,0.05);
+  width:725px;
+  height: 725px;
+  cursor:pointer;
+  transition:.3s;
+  background-color: #352F33;
+  background-image: url("black-paper.jpg");
+  float: left;
+  display: inline;
+}
+#dropzone:hover {
+  box-shadow:0 0 45px rgba(0,0,0,0.1);
+}
+#canvas-main {
+  position: relative;
+  width: 725px; 
+  height: 725px;
+  background-color: transparent;
+  border-radius: 15px;
+  z-index: 20;
+}
+.drop-message {
+  position: relative; 
+  left: 187px; 
+  top: 300px; 
+  width:350px; 
+  height:200px; 
+  background-color: transparent; 
+  color: white; 
+  z-index: 10;
+  font-size: 1.4em;
+  text-align: center;
+}
+table {
+  border-spacing: 4px;
+  border-color: gray;
+  padding-left: 7px;
+}
+td {
+  width: 133px;
+  height: 28px;
+  text-align: left;
+}
+.color-value { 
+  width: 200px; 
+  font-size: 0.9em;
+}
+.color-cell {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+#swatches {
+  display: inline;
+  position: relative;
+  margin-top: 20px;
+}
+
